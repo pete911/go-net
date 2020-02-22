@@ -84,7 +84,7 @@ func IcmpListen() {
 
 func icmpHandler(conn *icmp.PacketConn) {
 
-	msg, addr, err := neticmp.ReadPacketConn(conn)
+	msg, addr, err := neticmp.Read(conn)
 	if err != nil {
 		log.Fatal(err)
 	}
