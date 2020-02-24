@@ -78,7 +78,6 @@ func getIPPacket(src, dst net.IP, protocol int, msg []byte) ([]byte, error) {
 		Src:      src,
 	}
 
-	iph.Marshal()
 	ip, err := iph.Marshal()
 	if err != nil {
 		return nil, fmt.Errorf("marshal ip request: %w", err)
